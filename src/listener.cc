@@ -43,6 +43,8 @@
 
 #include <fstream>
 
+#include <sys/sysmacros.h>
+
 std::string getProcessName(pid_t pid)
 {
     std::string comm;
@@ -551,7 +553,7 @@ void AuditListener::parseSyscallEvent(auparse_state_t* au, boost::shared_ptr<Aud
 
     if(auditEvent->type == Open || auditEvent->type == OpenAt)
     {
-        int flags = strtol(parseField(au, "a1").c_str(), NULL, 16);
+        int flags = strtol(parseField(au, "a2").c_str(), NULL, 16);
 
         if(!(  flags & O_WRONLY
             || flags & O_RDWR

@@ -48,6 +48,8 @@ extern "C" {
 
 #include <boost/foreach.hpp>
 
+#include <sys/sysmacros.h>
+
 #define PID_FILE "/dev/.e4rat-lite-collect.pid"
 #define MATCH(s, n) strcmp(section, s) == 0 && strcmp(name, n) == 0
 

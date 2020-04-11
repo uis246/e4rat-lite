@@ -32,6 +32,8 @@
 
 #include <boost/lexical_cast.hpp>
 
+#include <sys/sysmacros.h>
+
 #define BLOCKS_PER_GROUP(fs)      (fs->super->s_blocks_per_group)
 #define BLOCKS_PER_FLEX(fs)       (BLOCKS_PER_GROUP(fs) << fs->super->s_log_groups_per_flex)
 #define FREE_BLOCKS_PER_GROUP(fs) ( BLOCKS_PER_GROUP(fs)        \
