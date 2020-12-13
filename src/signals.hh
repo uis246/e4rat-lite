@@ -42,11 +42,11 @@
 #include <boost/signals2/signal.hpp>
 
 //get the number of arguments
-#define BIND1ST _1
-#define BIND2ST _1,_2
-#define BIND3ST _1,_2,_3
-#define BIND4ST _1,_2,_3,_4
-#define BIND5ST _1,_2,_3,_4,_5
+#define BIND1ST boost::placeholders::_1
+#define BIND2ST boost::placeholders::_1, boost::placeholders::_2
+#define BIND3ST boost::placeholders::_1, boost::placeholders::_2, boost::placeholders::_3
+#define BIND4ST boost::placeholders::_1, boost::placeholders::_2, boost::placeholders::_3, boost::placeholders::_4
+#define BIND5ST boost::placeholders::_1, boost::placeholders::_2, boost::placeholders::_3, boost::placeholders::_4, boost::placeholders::_5
 
 #define VA_NUM_ARGS(...) VA_NUM_ARGS_IMPL(__VA_ARGS__,                 \
                                           BIND5ST,                     \

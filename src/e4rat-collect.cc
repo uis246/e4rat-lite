@@ -441,7 +441,7 @@ int main(int argc, char *argv[])
     if(config.ext4_only)
         listener.watchExt4Only();
 
-    CONNECT(&listener, eventParsed, boost::bind(&EventCatcher::handleAuditEvent, &project, _1));
+    CONNECT(&listener, eventParsed, boost::bind(&EventCatcher::handleAuditEvent, &project, boost::placeholders::_1));
 
     if(execute || 1 == getpid())
     {
