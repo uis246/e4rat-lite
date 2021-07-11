@@ -27,6 +27,7 @@ extern "C" {
     #include "config.h"
 }
 
+#include <cmath>
 #include <errno.h>
 #include <cstring>
 #include <sys/stat.h>

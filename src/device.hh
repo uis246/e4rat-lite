@@ -22,6 +22,7 @@
 
 #include "common.hh"
 
+#include <boost/shared_ptr.hpp>
 #include <string>
 #include <ext2fs/ext2fs.h>
 #include <ext2fs/ext2_fs.h>
