@@ -784,9 +784,8 @@ void AuditListener::exec()
             default:
                 break;
         }
-        auparse_reset(au);
+        auparse_destroy(au);
     }
-    auparse_destroy(au);
 }
 
 
