@@ -153,12 +153,7 @@ void AuditListener::watchFileSystemType(long t)
 
 void addSyscall(struct audit_rule_data* rule, const char* sc, int machine)
 {
-    int syscall_nr;
-    syscall_nr = audit_name_to_syscall(sc, machine);
-    if(syscall_nr == -1)
-        throw std::logic_error(_("Cannot convert syscall to number"));
-
-    audit_rule_syscall_data(rule, syscall_nr);
+    audit_rule_syscallbyname_data(rule, sc);
 }
 
 void AuditListener::activateRules(int machine)
