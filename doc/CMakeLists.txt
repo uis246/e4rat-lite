@@ -43,9 +43,9 @@ foreach( _langs ${_MAN_LANGS} )
                 ${CMAKE_CURRENT_SOURCE_DIR}/${_langs}/e4rat-lite-collect.8
                 ${CMAKE_CURRENT_SOURCE_DIR}/${_langs}/e4rat-lite-realloc.8
                 ${CMAKE_CURRENT_SOURCE_DIR}/${_langs}/e4rat-lite-preload.8
-                DESTINATION /usr/share/man/${_langs}/man8/)
+                DESTINATION ${CMAKE_INSTALL_PREFIX}/man/${_langs}/man8/)
     
     INSTALL(FILES
                 ${CMAKE_CURRENT_SOURCE_DIR}/${_langs}/e4rat-lite.conf.5
-                DESTINATION /usr/share/man/${_langs}/man5/)
+                DESTINATION ${CMAKE_INSTALL_PREFIX}/man/${_langs}/man5/)
 endforeach( _langs )
