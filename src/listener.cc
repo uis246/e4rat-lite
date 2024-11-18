@@ -151,7 +151,7 @@ void AuditListener::watchFileSystemType(long t)
     watch_fs_types.insert(t);
 }
 
-void addSyscall(struct audit_rule_data* rule, const char* sc, int machine)
+static void addSyscall(struct audit_rule_data* rule, const char* sc, int machine)
 {
     audit_rule_syscallbyname_data(rule, sc);
 }

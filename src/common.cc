@@ -198,9 +198,9 @@ fs::path realpath(fs::path ph, fs::path base)
      * combine base and path to full path
      */
     if(base.empty())
-        mypath = complete(ph); //base is current working directory
+        mypath = canonical(ph); //base is current working directory
     else
-        mypath = complete(ph, base);
+        mypath = canonical(ph, base);
     
     fs::path result;
 
